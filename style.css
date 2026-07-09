@@ -1,7 +1,7 @@
 /* --- Style global --- */
 body {
   background-color: #e6f0ff; /* Bleu clair agréable */
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -62,9 +62,7 @@ nav a {
   color: #000;
   font-weight: bold;
   font-size: 1.1em;
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
@@ -84,7 +82,7 @@ main section p {
 /* --- Présentation des anime --- */
 #presentation {
   display: grid;
-  grid-template-columns: repeat(3, 280px);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grille flexible */
   gap: 20px;
   justify-content: center;
   margin-top: 30px;
@@ -120,6 +118,7 @@ main section p {
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  animation: fadeInUp 0.6s ease;
 }
 
 #presentation article:hover {
@@ -140,9 +139,7 @@ main section p {
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
@@ -160,22 +157,8 @@ footer {
   font-size: 0.9em;
   letter-spacing: 1px;
 }
-@media (max-width: 900px) {
-  #presentation {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 600px) {
-  #presentation {
-    grid-template-columns: 1fr;
-  }
-}
-
-#presentation article {
-  animation: fadeInUp 0.6s ease;
-}
-
+/* --- Animation --- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -186,8 +169,46 @@ footer {
     transform: translateY(0);
   }
 }
-body {
-  font-family: "Poppins", sans-serif;
+
+/* --- Responsive Design --- */
+
+/* Tablettes (max 900px) */
+@media (max-width: 900px) {
+  nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  header h1 {
+    font-size: 2.5em;
+  }
 }
 
-  
+/* Mobiles (max 600px) */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 1em;
+    padding: 8px 0;
+  }
+
+  main section p {
+    font-size: 1.1em;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+  }
+
+  #presentation article {
+    padding: 15px;
+  }
+}
