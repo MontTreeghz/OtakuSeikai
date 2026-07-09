@@ -160,3 +160,32 @@ footer {
   font-size: 0.9em;
   letter-spacing: 1px;
 }
+@media (max-width: 900px) {
+  #presentation {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #presentation {
+    grid-template-columns: 1fr;
+  }
+}
+
+#presentation article {
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
