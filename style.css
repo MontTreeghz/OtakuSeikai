@@ -154,6 +154,88 @@ main section p {
   transform: scale(1.05);
 }
 
+/* --- Actualités Anime --- */
+#actualites {
+  margin: 40px auto;
+  max-width: 800px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#actualites h2 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+#actualites ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#actualites li {
+  font-size: 1.1em;
+  margin: 8px 0;
+  color: #222;
+}
+
+/* --- Catégories --- */
+#categories {
+  margin: 50px auto;
+  max-width: 1200px;
+}
+
+#categories h2 {
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 25px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.categories-grid article {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.categories-grid article:hover {
+  transform: translateY(-5px);
+}
+
+.categories-grid h3 a {
+  text-decoration: none;
+  color: #ff4500;
+  font-size: 1.3em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.categories-grid h3 a:hover {
+  color: #e63e00;
+}
+
+.categories-grid p {
+  font-size: 1em;
+  color: #333;
+  margin-top: 10px;
+}
+
 /* --- Pied de page --- */
 footer {
   text-align: center;
