@@ -301,3 +301,21 @@ footer {
     padding: 15px;
   }
 }
+
+.logo {
+  width: 120px; /* taille du logo */
+  height: auto; /* conserve les proportions */
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 100px; /* ajuste la taille du logo */
+  height: auto;
+}
